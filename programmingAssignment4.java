@@ -1,4 +1,4 @@
-//This class implements a for loop for traversasl of an array, implements methods beyond the main method,
+//This class implements a for loop for traversal of an array, implements methods beyond the main method,
 //implements a double dimension array to be passed to a method for data input, then, a method for some kind
 //of calculation on the double dimension array.
 
