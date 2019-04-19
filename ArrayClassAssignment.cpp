@@ -10,6 +10,7 @@
 #include <cstdlib>
 #include <vector>
 
+using namespace std;
 
 void emptyFull(int arraySize,int elementNum) {
 	int emptyElement;
