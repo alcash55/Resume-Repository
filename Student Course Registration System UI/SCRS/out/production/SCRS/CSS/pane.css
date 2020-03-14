@@ -1,0 +1,16 @@
+.pane{
+-fx-background-color: linear-gradient(to left,#ffffff,#d90303);
+-fx-background-radius: 90;
+}
+.pane2{
+-fx-background-color: linear-gradient(to left,#ffffff,#5bdf4f);
+-fx-background-radius: 90;
+}
+.pane3{
+-fx-background-color: linear-gradient(to left,#ffffff,#eeff3d);
+-fx-background-radius: 90;
+}
+.pane4{
+-fx-background-color: linear-gradient(to left,#ffffff,#191a05);
+-fx-background-radius: 90;
+}
