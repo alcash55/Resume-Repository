@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="661.0" maxWidth="1326.0" minHeight="0.0" minWidth="0.0" prefHeight="661.0" prefWidth="1326.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MenuController">
+    <children>
+        <AnchorPane prefHeight="121.0" prefWidth="1326.0" style="-fx-background-color: #154360;">
+            <children>
+                <Label alignment="CENTER" layoutX="339.0" layoutY="23.0" text="Sentry Secured Services 2.0" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Fira Code Medium" size="57.0" />
+                    </font>
+                </Label>
+                <ImageView accessibleRole="HYPERLINK" fitHeight="90.0" fitWidth="99.0" layoutX="25.0" layoutY="16.0" onMouseClicked="#RMU" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="file:/D:/College/Prototyping%20and%20Interface%20Design/SCRS/src/Icons/RMU%20LOGO.png" />
+                    </image>
+                </ImageView>
+            </children></AnchorPane>
+        <AnchorPane layoutY="115.0" prefHeight="732.0" prefWidth="1326.0" style="-fx-background-color: #002047;">
+            <children>
+            <Pane layoutX="14.0" layoutY="-46.0" prefHeight="500.0" prefWidth="126.0" rotate="-36.9" style="-fx-background-color: #B71C1C; -fx-background-radius: 70;" />
+                <Pane layoutX="849.0" layoutY="32.0" prefHeight="677.0" prefWidth="214.0" rotate="-142.2" style="-fx-background-color: #B71C1C; -fx-background-radius: 70;" />
+                <Button alignment="BOTTOM_CENTER" layoutX="448.0" layoutY="98.0" mnemonicParsing="false" onAction="#registrationStatusButton" opacity="0.8" prefHeight="185.0" prefWidth="180.0" style="-fx-background-radius: 30;" styleClass="button3" stylesheets="@../CSS/Button3.css" text="Registration&#10;Status" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Fira Code Medium" size="18.0" />
+                    </font>
+               <padding>
+                  <Insets bottom="5.0" />
+               </padding>
+                </Button>
+                <Pane accessibleRole="BUTTON" layoutX="481.0" layoutY="100.0" minHeight="110.0" minWidth="110.0" opacity="0.9" prefHeight="110.0" prefWidth="110.0" styleClass="pane2" stylesheets="@../CSS/pane.css">
+                    <children>
+                        <Pane layoutX="31.0" layoutY="31.0" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: ffffff; -fx-background-radius: 90;">
+                     <children>
+                                <ImageView fitHeight="62.0" fitWidth="64.0" layoutX="-6.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+                                    <cursor>
+                                        <Cursor fx:constant="S_RESIZE" />
+                                    </cursor>
+                                    <image>
+                                        <Image url="file:/D:/College/Prototyping%20and%20Interface%20Design/SCRS/src/Icons/status%20icon.png" />
+                                    </image>
+                                </ImageView>
+                     </children>
+                        </Pane>
+                    </children></Pane>
+                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="448.0" layoutY="324.0" mnemonicParsing="false" onAction="#calendarButton" opacity="0.8" prefHeight="185.0" prefWidth="180.0" style="-fx-background-radius: 30;" styleClass="button3" stylesheets="@../CSS/Button3.css" text="Calendar" textAlignment="CENTER" textFill="WHITE">
+                    <padding>
+                        <Insets bottom="15.0" />
+                    </padding>
+                    <font>
+                        <Font name="Fira Code Medium" size="25.0" />
+                    </font>
+                </Button>
+                <Pane accessibleRole="BUTTON" layoutX="483.0" layoutY="344.0" prefHeight="110.0" prefWidth="110.0" styleClass="pane" stylesheets="@../CSS/pane.css">
+                    <children>
+                        <ImageView fitHeight="62.0" fitWidth="64.0" layoutX="26.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                            <cursor>
+                                <Cursor fx:constant="S_RESIZE" />
+                            </cursor>
+                            <image>
+                                <Image url="@../Icons/calendar%20icon.png" />
+                            </image>
+                        </ImageView>
+                    </children></Pane>
+                <Button alignment="BOTTOM_CENTER" contentDisplay="CENTER" layoutX="700.0" layoutY="98.0" mnemonicParsing="false" onAction="#registrationPlannerButton" opacity="0.8" prefHeight="185.0" prefWidth="180.0" style="-fx-background-radius: 30;" styleClass="button3" stylesheets="@../CSS/Button3.css" text="Registration&#10;Planner" textAlignment="CENTER" textFill="WHITE">
+                    <font>
+                        <Font name="Fira Code Medium" size="18.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="10.0" />
+                    </padding>
+                </Button>
+                <Pane accessibleRole="BUTTON" layoutX="735.0" layoutY="100.0" opacity="0.9" prefHeight="110.0" prefWidth="110.0" styleClass="pane3" stylesheets="@../CSS/pane.css">
+               <children>
+                        <ImageView fitHeight="62.0" fitWidth="64.0" layoutX="24.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                            <cursor>
+                                <Cursor fx:constant="S_RESIZE" />
+                            </cursor>
+                            <image>
+                                <Image url="file:/D:/College/Prototyping%20and%20Interface%20Design/SCRS/src/Icons/notebook%20icon.png" />
+                            </image>
+                        </ImageView>
+               </children>
+                </Pane>
+                <Button alignment="BOTTOM_CENTER" layoutX="700.0" layoutY="324.0" mnemonicParsing="false" onAction="#courseRegistrationButton" opacity="0.8" prefHeight="185.0" prefWidth="180.0" style="-fx-background-radius: 30;" styleClass="button3" stylesheets="@../CSS/Button3.css" text="Course&#10;Registration" textAlignment="CENTER" textFill="WHITE">
+                    <padding>
+                        <Insets bottom="10.0" />
+                    </padding>
+                    <font>
+                        <Font name="Fira Code Medium" size="18.0" />
+                    </font>
+                </Button>
+                <Pane accessibleRole="BUTTON" layoutX="733.0" layoutY="328.0" opacity="0.9" prefHeight="110.0" prefWidth="110.0" styleClass="pane4" stylesheets="@../CSS/pane.css">
+               <children>
+                        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="20.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                            <cursor>
+                                <Cursor fx:constant="S_RESIZE" />
+                            </cursor>
+                            <image>
+                                <Image url="file:/D:/College/Prototyping%20and%20Interface%20Design/SCRS/src/Icons/course%20registration%20icon.png" />
+                            </image>
+                        </ImageView>
+               </children>
+                </Pane>
+                <Button alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="442.0" mnemonicParsing="false" onAction="#logOutButton" prefHeight="77.0" prefWidth="126.0" style="-fx-background-radius: 30;" styleClass="button3" stylesheets="@../CSS/Button3.css" text="Log Out" textFill="WHITE">
+                    <font>
+                        <Font name="Fira Code Medium" size="20.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
