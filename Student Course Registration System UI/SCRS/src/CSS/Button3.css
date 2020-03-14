@@ -1,0 +1,20 @@
+.button3{
+-fx-background-color :  #78909C ;
+-fx-background-radius:  30;
+-fx-font-size: 25px;
+-fx-font-family: "Fira Code Medium";
+}
+.button3:hover
+{
+-fx-background-color : #D7DBDD ;
+-fx-background-radius:  30;
+-fx-font-size: 25px;
+-fx-font-family: "Fira Code Medium";
+}
+.button3:pressed
+{
+-fx-background-color :   #002047 ;
+-fx-background-radius:  30;
+-fx-font-size: 25px;
+-fx-font-family: "Fira Code Medium";
+}
