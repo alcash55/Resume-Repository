@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="661.0" prefWidth="1326.0" style="-fx-background-color: #002047;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.calendarController">
+    <children>
+        <AnchorPane prefHeight="121.0" prefWidth="1326.0" style="-fx-background-color: #154360;">
+            <children>
+                <Label layoutX="529.0" layoutY="26.0" text="Calendar" textFill="WHITE">
+                    <font>
+                        <Font name="Fira Code Medium" size="56.0" />
+                    </font>
+                </Label>
+                <ImageView accessibleRole="HYPERLINK" fitHeight="90.0" fitWidth="99.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#RMU" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../Icons/RMU%20LOGO.png" />
+                    </image>
+                </ImageView>
+            </children></AnchorPane>
+        <Button alignment="CENTER" layoutX="14.0" layoutY="513.0" mnemonicParsing="false" onAction="#registrationPlannerButton" prefHeight="98.0" prefWidth="225.0" style="-fx-background-radius: 30;" styleClass="button3" stylesheets="@../CSS/Button3.css" text="Course&#10;Registration&#10;" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Fira Code Medium" size="25.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="389.0" mnemonicParsing="false" onAction="#registrationStatusButton" prefHeight="98.0" prefWidth="225.0" style="-fx-background-radius: 30;" styleClass="button3" stylesheets="@../CSS/Button3.css" text="Registration&#10;Status&#10;" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Fira Code Medium" size="25.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="14.0" layoutY="269.0" mnemonicParsing="false" onAction="#registrationPlannerButton" prefHeight="98.0" prefWidth="225.0" style="-fx-background-radius: 30;" styleClass="button3" stylesheets="@../CSS/Button3.css" text="Registration&#10;Planner" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Fira Code Medium" size="25.0" />
+            </font>
+        </Button>
+        <Button alignment="CENTER" layoutX="14.0" layoutY="144.0" mnemonicParsing="false" onAction="#menuButton" prefHeight="98.0" prefWidth="225.0" style="-fx-background-radius: 30;" styleClass="button3" stylesheets="@../CSS/Button3.css" text="Menu" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Fira Code Medium" size="25.0" />
+            </font>
+        </Button>
+        <TableView layoutX="312.0" layoutY="255.0" prefHeight="245.0" prefWidth="841.0">
+            <columns>
+                <TableColumn editable="false" maxWidth="140.0" prefWidth="140.0" text="Monday" />
+                <TableColumn maxWidth="140.0" prefWidth="140.0" text="Tuesday" />
+                <TableColumn maxWidth="140.0" minWidth="0.0" prefWidth="140.0" text="Wednesday" />
+                <TableColumn maxWidth="140.0" prefWidth="140.0" text="Thursday" />
+                <TableColumn maxWidth="140.0" prefWidth="140.0" text="Friday" />
+            <TableColumn maxWidth="140.0" prefWidth="140.0" text="Event Times" />
+            </columns>
+        </TableView>
+      <Button alignment="CENTER" layoutX="638.0" layoutY="526.0" mnemonicParsing="false" prefHeight="77.0" prefWidth="190.0" style="-fx-background-radius: 30;" styleClass="button3" stylesheets="@../CSS/Button3.css" text="Add Event" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Fira Code Medium" size="20.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>
