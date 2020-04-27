@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="900.0" minWidth="1000.0" style="-fx-background-color: #a89e9e;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <top>
+      <TabPane prefHeight="699.0" prefWidth="1000.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Overview of Asia">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="302.0" prefWidth="1000.0">
+                     <children>
+                        <TableView fx:id="tableView1" layoutX="250.0" layoutY="21.0" prefHeight="278.0" prefWidth="500.0">
+                          <columns>
+                            <TableColumn fx:id="outstandingCountryNameColumn" prefWidth="222.0" text="Country Name" />
+                            <TableColumn fx:id="outstandingUndernourishmentPercentColumn" prefWidth="145.0" text="Undernourishment %" />
+                              <TableColumn fx:id="outstandingNumFood" prefWidth="126.0" text="Amount of Food" />
+                          </columns>
+                        </TableView>
+                        <ImageView fitHeight="361.0" fitWidth="603.0" layoutX="228.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Pictures/TransportationMap.png" />
+                           </image>
+                        </ImageView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="All Data of Asia">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                            <TableView fx:id="tableView2" layoutX="95.0" layoutY="19.0" prefHeight="633.0" prefWidth="810.0">
+                                <columns>
+                                    <TableColumn fx:id="countryAreaCodesColumn" prefWidth="181.0" text="Country Area Code" />
+                                    <TableColumn fx:id="countryColumn" prefWidth="238.0" text="Country Name" />
+                                    <TableColumn fx:id="undernourishmentPercentColumn" prefWidth="173.0" text="Undernourishment %" />
+                                    <TableColumn fx:id="transportationColumn" prefWidth="216.0" text="Transporting or Receiving" />
+                                </columns>
+                            </TableView>
+                        </children></AnchorPane>
+                </content>
+            </Tab>
+            <Tab text="Food Distribution">
+                <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <children>
+                                <TableView fx:id="tableView3" layoutX="53.0" layoutY="19.0" prefHeight="633.0" prefWidth="894.0">
+                                    <columns>
+                                        <TableColumn fx:id="countryNameTransportationColumn" prefWidth="246.0" text="Country Name" />
+                                        <TableColumn fx:id="populationColumn" prefWidth="113.0" text="Population" />
+                                        <TableColumn fx:id="transportColumn" prefWidth="176.0" text="Transporting or Receiving" />
+                                        <TableColumn fx:id="foodAmountColumn" prefWidth="123.0" text="Amount of Food" />
+                                        <TableColumn fx:id="receivingCountryColumn" prefWidth="229.0" text="Receiving Country" />
+                                    </columns>
+                                </TableView>
+                        </children></AnchorPane>
+                </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </top>
+   <bottom>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #fc5b5b;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="842.0" layoutY="149.0" text="Team 1">
+               <font>
+                  <Font name="Fira Code Regular" size="42.0" />
+               </font>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="239.0" layoutY="29.0" prefHeight="143.0" prefWidth="656.0" text="Asian Food Distribution" textAlignment="CENTER">
+               <font>
+                  <Font name="Fira Code Regular" size="47.0" />
+               </font>
+            </Label>
+         </children></Pane>
+   </bottom>
+</BorderPane>
