@@ -3,6 +3,7 @@ package sample;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.math.RoundingMode;
 import java.net.URL;
 import java.sql.SQLOutput;
 import java.util.ResourceBundle;
@@ -19,6 +20,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import static java.util.Arrays.stream;
+import java.text.DecimalFormat;
 
 public class Controller implements Initializable {
 
@@ -52,11 +54,11 @@ public class Controller implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         //set up the columns for table3
-        countryNameTransportationColumn.setCellValueFactory(new PropertyValueFactory<transportation, String>("countryNameTransportationColumn"));
-        populationColumn.setCellValueFactory(new PropertyValueFactory<transportation, Integer>("populationColumn"));
-        transportColumn.setCellValueFactory(new PropertyValueFactory<transportation, String>("transportationColumn"));
-        foodAmountColumn.setCellValueFactory(new PropertyValueFactory<transportation, Integer>("foodAmountColumn"));
-        receivingCountryColumn.setCellValueFactory(new PropertyValueFactory<transportation, String>("receivingCountryColumn"));
+        countryNameTransportationColumn.setCellValueFactory(new PropertyValueFactory<transportation, String>("countryName"));
+        populationColumn.setCellValueFactory(new PropertyValueFactory<transportation, Integer>("population"));
+        transportColumn.setCellValueFactory(new PropertyValueFactory<transportation, String>("transportationData"));
+        foodAmountColumn.setCellValueFactory(new PropertyValueFactory<transportation, Integer>("numFood"));
+        receivingCountryColumn.setCellValueFactory(new PropertyValueFactory<transportation, String>("receivingCountry"));
 
         //set up the columns in the table2
         undernourishmentPercentColumn.setCellValueFactory(new PropertyValueFactory<asia, Integer>("undernourishmentPercent"));
@@ -67,7 +69,7 @@ public class Controller implements Initializable {
         //seting up the coulmns in table1
         outstandingUndernourishmentPercentColumn.setCellValueFactory(new PropertyValueFactory<asiaOutstanding, Integer>("outstandingUndernourishmentPercent"));
         outstandingCountryNameColumn.setCellValueFactory(new PropertyValueFactory<asiaOutstanding, String>("outstandingCountryName"));
-        outstandingNumFood.setCellValueFactory(new PropertyValueFactory<asiaOutstanding, Double>("outstandingNumberOfFood"));
+        outstandingNumFood.setCellValueFactory(new PropertyValueFactory<asiaOutstanding, Double>("totalFood"));
 
 
         //load data into the columns of the tableView from the excel method
@@ -99,6 +101,8 @@ public class Controller implements Initializable {
                      MyExcelReadInts.ReadCountryNames(i,12),
                      MyExcelReadInts.ReadCellCountryFoodData(i,13),
                      MyExcelReadInts.ReadCountryNames(i,15))); //reading data right into the ObservableList
+
+
         }
         return(data3);
     }
@@ -122,6 +126,7 @@ public class Controller implements Initializable {
                              MyExcelReadInts.ReadCountryNames(i,3),
                              MyExcelReadInts.ReadCellCountryData(i, 11),
                              MyExcelReadInts.ReadCountryNames(i,12))); //reading data right into the ObservableList
+
         }
         return (data2); //returns data
     }
@@ -145,6 +150,8 @@ public class Controller implements Initializable {
                 data1.addAll(new asiaOutstanding(MyExcelReadInts.ReadCellCountryData(i, 11),
                         MyExcelReadInts.ReadCellCountryFoodData(i,13),
                         MyExcelReadInts.ReadCountryNames(i,3)));
+
+
             }
         }
         return(data1);
@@ -185,8 +192,11 @@ public class Controller implements Initializable {
      */
 
     public static double ReadCellCountryFoodData(int vRow, int vColumn) {
-        double result = 0;
+        double result = 0.0;
+        DecimalFormat df = new DecimalFormat("#.##");
+        df.setRoundingMode(RoundingMode.CEILING);
         Workbook wb = null;
+
         try {
             FileInputStream fis = new FileInputStream("D:/College/Software D&C/.idea/AsiaUndernourishment_Team1/src/sample/Excel Data/Asia_Undernourishment_Data.xlsx");
             wb = new XSSFWorkbook(fis);
@@ -199,6 +209,8 @@ public class Controller implements Initializable {
         Row row = sheet.getRow(vRow);
         Cell cell = row.getCell(vColumn);
         result = (double) cell.getNumericCellValue();
+        result = Double.parseDouble((df.format(result)));
+
         return result;
     }
 
